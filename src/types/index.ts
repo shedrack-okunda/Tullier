@@ -5,21 +5,21 @@ export interface Testimonial {
 	rating: number;
 }
 
-export interface Programs {
+export interface Program {
 	title: string;
 	description: string;
 	duration: string;
 	price: string;
 }
 
-export interface Resources {
+export interface Resource {
 	title: string;
 	author: string;
 	price: string;
 	description: string;
 }
 
-export interface Events {
+export interface Event {
 	title: string;
 	date: Date;
 	time: string;
@@ -27,7 +27,7 @@ export interface Events {
 	description: string;
 }
 
-export interface Services {
+export interface Service {
 	icon: string;
 	title: string;
 	description: string;
