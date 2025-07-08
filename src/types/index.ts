@@ -21,7 +21,7 @@ export interface Resource {
 
 export interface Event {
 	title: string;
-	date: Date;
+	date: string;
 	time: string;
 	location: string;
 	description: string;
