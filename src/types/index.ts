@@ -26,9 +26,3 @@ export interface Event {
 	location: string;
 	description: string;
 }
-
-export interface Service {
-	icon: string;
-	title: string;
-	description: string;
-}
