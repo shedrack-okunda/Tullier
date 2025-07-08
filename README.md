@@ -1,4 +1,4 @@
-# Tullier Wellness Landing Page
+# Tullier Wellness
 
 A modern, responsive landing page for Tullier Wellness - a trauma-informed counseling and healing center focused on providing safe spaces for individuals aged 21-35, with particular emphasis on youth and women.
 
@@ -75,12 +75,12 @@ yarn install
 3. Start the development server:
 
 ```bash
-npm start
+npm run dev
 # or
 yarn start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
 
 ### Building for Production
 
@@ -144,13 +144,6 @@ All styling uses Tailwind utility classes for easy customization:
 -   Colors: `bg-*`, `text-*`, `border-*`
 -   Layout: `grid-*`, `flex-*`, `items-*`
 
-## 🌐 Browser Support
-
--   Chrome 90+
--   Firefox 88+
--   Safari 14+
--   Edge 90+
-
 ## 📈 Performance Features
 
 -   **Optimized Images**: Responsive image loading
@@ -175,9 +168,9 @@ All styling uses Tailwind utility classes for easy customization:
 
 For questions about the Tullier Wellness landing page:
 
--   **Email**: hello@tullierwellness.com
--   **Phone**: +1 (555) 123-4567
--   **Address**: 123 Healing Way, Wellness District
+-   **Email**: okundashedrack@gmail.com
+-   **Phone**: +2547 2026 0412
+-   **Address**: Nairobi, Kenya
 
 ## 🤝 Contributing
 
@@ -199,27 +192,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 -   **Accessibility**: WCAG guidelines consideration
 -   **Modern Web Standards**: Following current best practices
 -   **Community Focus**: Designed for healing and growth
-
-## 🚀 Deployment Options
-
-### Netlify
-
-1. Connect your GitHub repository
-2. Set build command: `npm run build`
-3. Set publish directory: `build`
-4. Deploy!
-
-### Vercel
-
-1. Import project from GitHub
-2. Configure build settings
-3. Deploy automatically
-
-### Traditional Hosting
-
-1. Run `npm run build`
-2. Upload the `build` folder to your web server
-3. Configure server for SPA routing
 
 ## 🔄 Updates & Maintenance
 
