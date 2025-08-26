@@ -11,13 +11,32 @@ const images = [
 
 const Hero: React.FC = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const [loaded, setLoaded] = useState<boolean[]>(
+		new Array(images.length).fill(false)
+	);
 
+	// Preload images
+	useEffect(() => {
+		images.forEach((src, index) => {
+			const img = new Image();
+			img.src = src;
+			img.onload = () => {
+				setLoaded((prev) => {
+					const copy = [...prev];
+					copy[index] = true;
+					return copy;
+				});
+			};
+		});
+	}, []);
+
+	// Auto-rotate
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setCurrentIndex((prevIndex) =>
 				prevIndex === images.length - 1 ? 0 : prevIndex + 1
 			);
-		}, 5000); // change every 5s
+		}, 9000);
 		return () => clearInterval(interval);
 	}, []);
 
@@ -25,12 +44,20 @@ const Hero: React.FC = () => {
 		<section
 			id="home"
 			className="relative overflow-hidden h-[90vh] flex items-center justify-center">
-			{/* Background Image */}
-			<div
-				className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-				style={{
-					backgroundImage: `url(${images[currentIndex]})`,
-				}}></div>
+			{/* Background Crossfade */}
+			<div className="absolute inset-0">
+				{images.map((src, index) => (
+					<div
+						key={index}
+						className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+							index === currentIndex && loaded[index]
+								? "opacity-100"
+								: "opacity-0"
+						}`}
+						style={{ backgroundImage: `url(${src})` }}
+					/>
+				))}
+			</div>
 
 			{/* Overlay gradient */}
 			<div className="absolute inset-0 bg-gradient-to-br from-amber-100/60 to-orange-100/60"></div>
