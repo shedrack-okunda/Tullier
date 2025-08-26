@@ -13,9 +13,6 @@ const About: React.FC = () => {
 				</div>
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<div>
-						<h3 className="text-2xl font-semibold text-amber-800 mb-6">
-							Born from Personal Journey
-						</h3>
 						<p className="text-amber-700 text-lg leading-relaxed mb-6">
 							Tullier was born from a deeply personal journey of
 							healing. Founded by individuals who navigated their
@@ -31,6 +28,10 @@ const About: React.FC = () => {
 					</div>
 					<div className="bg-gradient-to-br from-amber-200 to-orange-200 rounded-2xl p-8 shadow-xl">
 						<div className="space-y-6">
+							<h2 className="text-center text-2xl font-semibold text-amber-800">
+								Our Commitment
+							</h2>
+
 							<div className="flex items-center space-x-4">
 								<div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center">
 									<Heart className="w-6 h-6 text-white" />

@@ -7,8 +7,8 @@ const Programs: React.FC = () => {
 			title: "Individual Trauma Therapy",
 			description:
 				"Personalized one-on-one sessions focusing on trauma recovery and emotional healing.",
-			duration: "12 weeks",
-			price: "Ksh 1000/session",
+			duration: "",
+			price: "Ksh 2000",
 		},
 		{
 			title: "Group Healing Circles",
@@ -21,7 +21,7 @@ const Programs: React.FC = () => {
 			title: "Youth Empowerment Program",
 			description:
 				"Specialized program for individuals aged 21-35 focusing on life skills and resilience.",
-			duration: "16 weeks",
+			duration: "8 weeks",
 			price: "ksh 2000/session",
 		},
 		{

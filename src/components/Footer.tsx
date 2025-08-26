@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
 						<h4 className="text-lg font-semibold mb-4">Connect</h4>
 						<ul className="space-y-2 text-amber-200">
 							<li>heytullier@gmail.com</li>
-							<li>+2547 </li>
+							<li>+2547 3336 2206 </li>
 							<li>Nairobi, Kenya</li>
 						</ul>
 					</div>
