@@ -1,6 +1,7 @@
-import type React from "react";
+import React, { useState } from "react";
 import type { Resource } from "../../types";
 import { BookOpen } from "lucide-react";
+import CheckoutModal from "./CheckoutModal";
 
 const Resources: React.FC = () => {
 	const resources: Resource[] = [
@@ -26,6 +27,14 @@ const Resources: React.FC = () => {
 				"Self-discovery and healing practices for young adults.",
 		},
 	];
+
+	const [showModal, setShowModal] = useState(false);
+	const [selectedBook, setSelectedBook] = useState<Resource | null>(null);
+
+	// For redirecting to home after payment
+	const handleComplete = () => {
+		window.location.hash = "#home";
+	};
 
 	return (
 		<section
@@ -62,7 +71,12 @@ const Resources: React.FC = () => {
 								<span className="text-2xl font-bold text-orange-600 mb-4 block">
 									{resource.price}
 								</span>
-								<button className="bg-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+								<button
+									className="bg-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+									onClick={() => {
+										setSelectedBook(resource);
+										setShowModal(true);
+									}}>
 									Order Now
 								</button>
 							</div>
@@ -70,6 +84,14 @@ const Resources: React.FC = () => {
 					))}
 				</div>
 			</div>
+			{showModal && selectedBook && (
+				<CheckoutModal
+					bookTitle={selectedBook.title}
+					price={selectedBook.price}
+					onClose={() => setShowModal(false)}
+					onComplete={handleComplete}
+				/>
+			)}
 		</section>
 	);
 };
