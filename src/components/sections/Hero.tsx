@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 const images = [
-	"https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
-	"https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
-	"https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-	"https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
-	"https://images.unsplash.com/photo-1531482615713-2afd69097998",
-	"https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+	"https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80",
+	"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80",
+	"https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1200&q=80",
+	"https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80",
+	"https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80",
+	"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80",
 ];
 
 const Hero: React.FC = () => {
@@ -45,11 +45,11 @@ const Hero: React.FC = () => {
 			id="home"
 			className="relative overflow-hidden h-[90vh] flex items-center justify-center">
 			{/* Background Crossfade */}
-			<div className="absolute inset-0">
+			<div className="absolute inset-0 overflow-hidden">
 				{images.map((src, index) => (
 					<div
 						key={index}
-						className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+						className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
 							index === currentIndex && loaded[index]
 								? "opacity-100"
 								: "opacity-0"
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
 						Transformative Healing
 					</span>
 				</h1>
-				<p className="text-xl md:text-2xl text-amber-800 mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+				<p className="text-xl md:text-2xl text-amber-900 mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
 					At Tullier, we believe in the transformative power of safe
 					spaces and conversations. Our mission is to provide a haven
 					for mental and emotional well-being, offering counselling
