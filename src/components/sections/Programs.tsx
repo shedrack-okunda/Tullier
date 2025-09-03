@@ -57,9 +57,11 @@ const Programs: React.FC = () => {
 								{program.description}
 							</p>
 							<div className="flex justify-between items-center mb-6">
-								<span className="text-amber-800 font-medium">
-									Duration: {program.duration}
-								</span>
+								{program.duration && (
+									<span className="text-amber-800 font-medium">
+										Duration: {program.duration}
+									</span>
+								)}
 								<span className="text-2 font-bold text-orange-600">
 									{program.price}
 								</span>
