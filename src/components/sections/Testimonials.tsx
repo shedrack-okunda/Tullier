@@ -7,19 +7,19 @@ const Testimonials: React.FC = () => {
 		{
 			name: "Sarah M.",
 			text: "Tullier provided the safe space I needed to heal. The trauma-informed approach made all the difference in my recovery journey.",
-			image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e", // demo image
+			image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=120&q=60",
 			rating: 5,
 		},
 		{
 			name: "David K.",
 			text: "The counseling services here are exceptional. I've gained tools and insights that have transformed my relationships and self-understanding.",
-			image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+			image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=60",
 			rating: 5,
 		},
 		{
 			name: "Maya L.",
 			text: "As a young woman navigating trauma, I found not just healing but a community that truly understands. Grateful for this sanctuary.",
-			image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+			image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=120&q=60",
 			rating: 5,
 		},
 	];
@@ -41,13 +41,28 @@ const Testimonials: React.FC = () => {
 							className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-200/50 flex flex-col justify-between">
 							{/* Top: image + name */}
 							<div className="flex items-center mb-4">
-								{testimonial.image && (
-									<img
-										src={testimonial.image}
-										alt={testimonial.name}
-										className="w-15 h-15 rounded-full object-cover mr-4"
-									/>
-								)}
+								<div className="w-16 h-16 rounded-full bg-amber-100 mr-4 flex items-center justify-center overflow-hidden">
+									{testimonial.image ? (
+										<img
+											src={testimonial.image}
+											alt={testimonial.name}
+											loading="lazy"
+											className="w-16 h-16 rounded-full object-cover"
+											style={{
+												minWidth: 64,
+												minHeight: 64,
+											}}
+											onError={(e) => {
+												e.currentTarget.style.display =
+													"none";
+											}}
+										/>
+									) : (
+										<span className="text-amber-400 text-xl">
+											?
+										</span>
+									)}
+								</div>
 								<p className="text-amber-900 font-semibold">
 									{testimonial.name}
 								</p>
