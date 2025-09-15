@@ -5,13 +5,6 @@ export interface Testimonial {
 	rating: number;
 }
 
-export interface Program {
-	title: string;
-	description: string;
-	duration: string;
-	price: string;
-}
-
 export interface Resource {
 	title: string;
 	author: string;

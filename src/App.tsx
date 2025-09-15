@@ -1,5 +1,4 @@
-import Footer from "./components/Footer";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/common/Navigation";
 import About from "./components/sections/About";
 import Events from "./components/sections/Events";
 import Hero from "./components/sections/Hero";
@@ -9,6 +8,7 @@ import Services from "./components/sections/Services";
 import Testimonials from "./components/sections/Testimonials";
 import Newsletter from "./components/sections/Newsletter";
 import Contact from "./components/sections/Contact";
+import Footer from "./components/common/Footer";
 
 function App() {
 	return (
