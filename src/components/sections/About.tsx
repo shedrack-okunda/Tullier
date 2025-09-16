@@ -19,9 +19,9 @@ const fadeUpVariants: Variants = {
 	},
 };
 
-// Paragraph animations → each one different
+// Paragraph animations
 const paragraphLeft: Variants = {
-	hidden: { opacity: 0, x: -50 },
+	hidden: { opacity: 0, x: -10 },
 	visible: {
 		opacity: 1,
 		x: 0,
@@ -30,7 +30,7 @@ const paragraphLeft: Variants = {
 };
 
 const paragraphRight: Variants = {
-	hidden: { opacity: 0, x: 50 },
+	hidden: { opacity: 0, x: 20 },
 	visible: {
 		opacity: 1,
 		x: 0,

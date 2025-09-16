@@ -28,14 +28,23 @@ const Testimonials: React.FC = () => {
 			aria-labelledby="testimonials-title">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
-					<h2
+					<motion.h2
 						id="testimonials-title"
-						className="text-4xl font-bold text-amber-900 mb-6">
+						className="text-4xl font-bold text-amber-900 mb-6"
+						initial={{ opacity: 0, y: -20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, ease: "easeOut" }}>
 						What Our Clients Say
-					</h2>
-					<div
+					</motion.h2>
+
+					<motion.div
 						className="w-24 h-1 bg-orange-600 mx-auto mb-8"
-						aria-hidden="true"></div>
+						initial={{ scaleX: 0 }}
+						whileInView={{ scaleX: 1 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, ease: "easeOut" }}
+					/>
 				</div>
 
 				<motion.div

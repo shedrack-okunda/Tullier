@@ -14,7 +14,7 @@ const fadeUpVariants: Variants = {
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.8, ease: "easeOut" },
+		transition: { duration: 0.7, ease: "easeOut" },
 	},
 };
 
@@ -52,7 +52,7 @@ const Programs: React.FC = () => {
 
 				{/* Program Cards */}
 				<motion.div
-					className="grid md:grid-cols-2 gap-8"
+					className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true, amount: 0.2 }}
